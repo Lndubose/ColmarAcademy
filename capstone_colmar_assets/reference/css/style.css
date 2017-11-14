@@ -1,0 +1,421 @@
+/*universal*/
+html {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+@viewport{
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+
+@media only screen and (max-width: 1150px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/*header*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1rem 1.5rem;
+  max-height: 64px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  max-height: 32px;
+  text-transform: uppercase;
+}
+
+.logo img {
+  height: 2.25rem;
+  width: auto;
+}
+
+.logo h1 {
+  font-size: 1.25rem;
+}
+
+.colmar {
+  color: rgb(74, 74, 74);
+  font-weight: bold;
+}
+
+.academy {
+  color: rgb(155, 155, 155);
+}
+
+nav{
+  display: flex;
+  white-space: nowrap;
+}
+
+.desktop-icon {
+  width: 100%;
+  margin: auto;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+.desktop-icon:visited {
+  color: rgb(74, 74, 74);
+}
+
+.mobile-icon {
+  display: none;
+}
+
+@media only screen and (max-width:760px) {
+  .desktop-icon {
+    display: none;
+  }
+
+  .mobile-icon {
+    display: flex;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .logo img, .mobile-icon {
+    display: flex;
+    flex-shrink: 1;
+    margin: 0 2rem;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo h1{
+    display: none;
+  }
+
+}
+
+/*Banner*/
+.banner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(216, 216, 216, 0.9);
+  border-bottom: 1px solid rgb(224, 226, 226);
+}
+
+.banner img {
+  margin: 2rem 1.5rem;
+  width: 60%;
+  height: auto;
+}
+
+.banner-text {
+  display: block;
+  width: 100%;
+  margin: auto 4rem auto 1.5rem;
+  line-height: 1.25;
+  color: rgb(74, 74, 74);
+}
+
+.banner-text h2 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: Helvetica, sans-serif;
+}
+
+.paragraph {
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.button {
+  margin-top: 2.5rem;
+  padding: 0.5rem;
+  width: 80%;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: rgb(74, 74, 74);
+  color: rgb(255, 255, 255);
+}
+
+@media only screen and (max-width: 1020px) {
+
+  .banner-text {
+    margin-right: 1rem;
+    width: 100%;
+  }
+
+  .banner-text h2 {
+
+  }
+
+  .paragraph {
+
+  }
+}
+
+/*main*/
+main {
+  display: flex;
+  align-items: flex-start;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 1.5rem;
+  width: 60%;
+  color: rgb(74, 74, 74);
+}
+
+.main img {
+  height: auto;
+  width: 100%;
+}
+
+.main h2 {
+  margin: 32px 0;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.main-info {
+  width: 90%;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+  word-spacing: 1.5px;
+  color: rgb(84, 84, 84);
+}
+
+.caption {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: rgb(66, 66, 66);
+}
+
+/*aside of main*/
+.main-aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 0;
+  width: 40%;
+  border-left: 1.5px solid rgb(224, 226, 226);
+}
+
+.main-aside figure {
+  display: flex;
+  align-items: flex-start;
+  border-right: 1.5px solid rgb(224, 226, 226);
+  border-bottom: 1.5px solid rgb(224, 226, 226);
+  border-top: 1.5px solid rgb(224, 226, 226);
+}
+
+.desktop {
+  margin: 1rem;
+  width: 35%;
+  height: auto;
+}
+
+.aside-info {
+  align-self: center;
+  width: 65%;
+  color: rgb(76, 76, 76);
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+.aside-info h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.aside-info p {
+  width: 70%;
+}
+
+.read {
+  margin-top: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.read a {
+  color: rgb(74, 144, 226);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.read a:visited {
+  color: rgb(74, 144, 226);
+}
+
+.mobile {
+  display: none;
+}
+
+/*classes*/
+.classes {
+  padding: 2rem 4.5rem;
+  color: rgb(74, 74, 74);
+  background-color: gray;
+}
+
+.classes h1 {
+  margin: 32px auto;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.class{
+  display: flex;
+}
+
+.class figure {
+  margin: 1rem 1rem;
+  width: 40%;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+}
+
+.class figure img {
+  height: auto;
+  width: 100%;
+}
+
+.class figcaption {
+  padding: 0 1rem 2rem 1rem;
+  width: 85%;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  word-spacing: 1.2px;
+}
+
+.class figcaption h3 {
+  margin: 1rem auto;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.course {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+/*exhibit*/
+
+.exhibit {
+  background-color: white;
+  color: rgb(74, 74, 74);
+}
+
+.exhibit h1 {
+  margin: 2rem 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.exhibit-front {
+  display: flex;
+}
+
+.video {
+display: flex;
+flex-direction: column;
+margin: 0 1.5rem;
+width: 60%;
+height: auto;
+}
+
+video {
+  width: 100%;
+}
+
+.video h2{
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.video p {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.thesis-aside {
+  width: 40%;
+  color: rgb( 76, 76, 76);
+}
+
+.thesis-aside figure {
+  display: flex;
+  align-items: flex-start;
+}
+
+.thesis-aside figcaption {
+  align-self: center;
+  width: 65%;
+}
+
+.thesis-aside figcaption h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  word-spacing: 1px;
+  line-height: 1.5;
+}
+
+.thesis-aside figcaption p {
+  margin-top: 0.5rem;
+  width: 90%;
+  word-spacing: 1px;
+  line-height: 1.5;
+}
+
+.thesis-aside img {
+  margin: 1rem;
+  width: 35%;
+  height: auto;
+}
+
+/*footer*/
+footer {
+  display: flex;
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  border-top: 1px solid rgb(224, 226, 226);
+  color: rgb(74, 74, 74);
+}
+
+footer span {
+  width: 100%;
+}
+
+footer nav a{
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+footer nav a:visited {
+  color: rgb(74, 74, 74);
+}
