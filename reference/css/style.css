@@ -85,7 +85,8 @@ header {
 }
 
 .desktop-icon:hover {
-  background-color: rgb(194, 194, 194);
+  background-color: rgb(204, 204, 204);
+  transition: background-color 0.7s linear;
 }
 
 .desktop-icon:active {
@@ -175,6 +176,7 @@ header {
 .button:hover {
   background-color: rgb(94, 94, 94);
   cursor: pointer;
+  transition: background-color 0.7s ease 0.1s;
 }
 
 .button:active {
@@ -224,6 +226,9 @@ header {
     margin: 1.5rem auto 0 auto;
   }
 
+  .button:hover {
+    background-color: rgb(74, 74, 74);
+  }
   .button:active {
     background-color: rgb(94, 94, 94);
   }
@@ -298,6 +303,7 @@ main {
 
 .main-aside figure:hover {
   background-color: rgb(204, 204, 204);
+  transition: background-color 0.7s ease-out 0.1s;
 }
 
 .bottom {
@@ -398,8 +404,16 @@ main {
     margin-bottom: 2rem;
   }
 
+  .read:hover {
+    text-decoration: none;
+  }
+
   .read:active {
     text-decoration: underline;
+  }
+
+  .main-aside figure:hover {
+    background-color: inherit;
   }
 }
 
@@ -466,6 +480,7 @@ main {
 
 .class figure:hover {
   background-color: rgb(204, 204, 204);
+  transition: background-color 0.4s ease;
 }
 
 .class figure:active {
@@ -506,6 +521,10 @@ main {
 
   .class figcaption h3 {
     margin: 0;
+  }
+
+  .class figure:hover {
+    background-color: rgb(255, 255, 255);
   }
 
   .class figure:active {
@@ -597,6 +616,7 @@ video {
 
 .thesis-aside figure:hover {
   background-color: rgb(204, 204, 204);
+  transition: background-color 0.7s ease-out 0.1s;
 }
 
 @media only screen and (max-width: 760px) {
@@ -615,6 +635,9 @@ video {
 
   video{
     width: 100%;
+  }
+  .thesis-aside figure:hover {
+    background-color: inherit);
   }
 }
 
