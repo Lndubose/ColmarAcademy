@@ -17,7 +17,7 @@ body {
 
 @media only screen and (max-width: 1100px) {
   html {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
@@ -34,7 +34,7 @@ header {
   justify-content: space-around;
   padding: 1rem 1.5rem;
   max-height: 64px;
-  background-color: rgb(204, 204, 204);
+  background-color: rgb(245, 250, 250);
 }
 
 .logo {
@@ -51,7 +51,7 @@ header {
 }
 
 .logo h1 {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
 }
 
 .colmar {
@@ -61,23 +61,37 @@ header {
 
 .academy {
   color: rgb(92, 158, 173);
+  font-weight: bold;
 }
 
 .desktop-nav {
   display: flex;
   white-space: nowrap;
+  font-weight: 600;
 }
 
 .desktop-icon {
   width: 100%;
-  margin: auto;
+  margin: auto 0.3rem;
   padding: 0.5rem;
   text-decoration: none;
+  border: 2px solid rgb(204, 204, 204);
+  border-radius: 7px;
+  background-color: rgb(184, 184, 184);
 }
 
 .desktop-icon:visited, .desktop-icon:link {
   color: rgb(13, 13, 13);
 }
+
+.desktop-icon:hover {
+  background-color: rgb(194, 194, 194);
+}
+
+.desktop-icon:active {
+  background-color: rgb(184, 184, 184);
+}
+
 
 .mobile-nav {
   display: none;
@@ -124,7 +138,7 @@ header {
   width: 100%;
   margin: auto 4rem auto 1.5rem;
   line-height: 1.25;
-  color: rgb(74, 74, 74);
+  color: rgb(50, 50, 50);
 }
 
 .banner-text h2 {
@@ -136,8 +150,9 @@ header {
 
 .paragraph {
   margin-bottom: 1rem;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-weight: bold;
+  font-family: "Times New Roman", serif;
   line-height: 1.5;
 }
 
@@ -147,8 +162,23 @@ header {
   width: 80%;
   font-size: 1.5rem;
   text-align: center;
+  border-radius: 3px;
   background-color: rgb(74, 74, 74);
   color: rgb(255, 255, 255);
+}
+
+.button a:visited, .button a:link {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: rgb(94, 94, 94);
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: rgb(74, 74, 74);
 }
 
 @media only screen and (max-width: 1020px) {
@@ -193,13 +223,17 @@ header {
     width: 80%;
     margin: 1.5rem auto 0 auto;
   }
+
+  .button:active {
+    background-color: rgb(94, 94, 94);
+  }
 }
 
 /*main*/
 main {
   display: flex;
   align-items: flex-start;
-  background-color: rgb(224, 226, 226);
+  background-color: rgb(245, 250, 250);
 }
 
 .main {
@@ -224,16 +258,18 @@ main {
 
 .main-info {
   width: 90%;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   line-height: 1.25;
   letter-spacing: 0.5px;
   word-spacing: 1.5px;
+  line-height: 1.5;
+  font-family: "Times New Roman", serif;
   color: rgb(13, 13, 13);
 }
 
 .caption {
   margin-top: 1.5rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: rgb(66, 66, 66);
 }
 
@@ -258,6 +294,10 @@ main {
   border-top: 1.5px solid rgb(204, 204, 204);
   border-left: 1.5px solid rgb(204, 204, 204);
   border-right: 1.5px solid rgb(204, 204, 204);
+}
+
+.main-aside figure:hover {
+  background-color: rgb(204, 204, 204);
 }
 
 .bottom {
@@ -285,11 +325,15 @@ main {
 
 .aside-info p {
   width: 70%;
+  font-size: 1.1rem;
+  font-family: "Times New Roman", serif;
 }
 
 .read {
   margin-top: 1rem;
   letter-spacing: 0.5px;
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 .read a {
@@ -300,6 +344,10 @@ main {
 
 .read a:visited {
   color: rgb(74, 144, 226);
+}
+
+.read a:hover {
+  text-decoration: underline;
 }
 
 .mobile-image {
@@ -350,6 +398,9 @@ main {
     margin-bottom: 2rem;
   }
 
+  .read:active {
+    text-decoration: underline;
+  }
 }
 
 /*classes*/
@@ -362,9 +413,9 @@ main {
 .classes h1 {
   margin: 2rem auto;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  color: rgb(255, 255, 250);
+  color: rgb(50, 50, 50);
 }
 
 .class{
@@ -376,6 +427,7 @@ main {
   width: 40%;
   height: auto;
   background-color: rgb(255, 255, 255);
+  border: 1px groove rgb(245, 250, 250);
 }
 
 .class figure img {
@@ -397,10 +449,27 @@ main {
   font-weight: bold;
 }
 
+.class figcaption p {
+  font-size: 1.3rem;
+  font-family: "Times New Roman", serif;
+}
+
 .course {
   margin-bottom: 0.5rem;
   text-transform: uppercase;
-  font-size: 1.2rem;
+}
+
+.class figure a:visited, .class figure a:link {
+  text-decoration: none;
+  color: rgb(50, 50, 50);
+}
+
+.class figure:hover {
+  background-color: rgb(204, 204, 204);
+}
+
+.class figure:active {
+  background-color: rgb(255, 255, 255);
 }
 
 @media only screen and (max-width: 760px) {
@@ -438,19 +507,23 @@ main {
   .class figcaption h3 {
     margin: 0;
   }
+
+  .class figure:active {
+    background-color: rgb(204, 204, 204);
+  }
 }
 
 /*exhibit*/
 
 .exhibit {
-  background-color: rgb(204, 204, 204);
+  background-color: rgb(245, 250, 250);
   color: rgb(13, 13, 13);
 }
 
 .exhibit h1 {
   margin: 2rem 0;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
@@ -468,18 +541,21 @@ height: auto;
 
 video {
   width: 100%;
+  cursor: pointer;
 }
 
 .video h2{
   margin-top: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
 .video p {
   margin-top: 0.5rem;
   margin-bottom: 2rem;
-  line-height: 1.5;
+  font-size: 1.4rem;
+  font-family: "Times New Roman", serif;
+  line-height: 1.6;
 }
 
 .thesis-aside {
@@ -509,12 +585,18 @@ video {
   width: 90%;
   word-spacing: 1px;
   line-height: 1.5;
+  font-size: 1.25rem;
+  font-family: "Times New Roman", serif;
 }
 
 .thesis-aside img {
   margin: 1rem;
   width: 35%;
   height: auto;
+}
+
+.thesis-aside figure:hover {
+  background-color: rgb(204, 204, 204);
 }
 
 @media only screen and (max-width: 760px) {
@@ -545,6 +627,10 @@ footer {
   background-color: rgb(76, 76, 76);
 }
 
+footer nav {
+  display: flex;
+}
+
 footer span {
   width: 100%;
 }
@@ -556,6 +642,10 @@ footer nav a{
 
 footer nav a:visited, footer a:link {
   color: rgb(204, 204, 204);
+}
+
+footer nav a:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (max-width:760px) {
