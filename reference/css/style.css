@@ -1,9 +1,12 @@
 /*universal*/
 html {
+  font-size: 16px;
+}
+
+body {
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  font-size: 16px;
   font-family: sans-serif;
 }
 
@@ -12,16 +15,16 @@ html {
     width: extend-to-zoom;
 }
 
-@media only screen and (max-width: 1150px) {
+@media only screen and (max-width: 1100px) {
   html {
     font-size: 14px;
   }
 }
 
-@media only screen and (max-width: 1020px) {
-  html {
-    font-size: 12px;
-  }
+@media only screen and (max-width: 760px) {
+   html {
+     font-size: 16px;
+   }
 }
 
 /*header*/
@@ -29,8 +32,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin: 1rem 1.5rem;
+  padding: 1rem 1.5rem;
   max-height: 64px;
+  background-color: rgb(204, 204, 204);
 }
 
 .logo {
@@ -41,7 +45,7 @@ header {
   text-transform: uppercase;
 }
 
-.logo img {
+.logo-desktop img {
   height: 2.25rem;
   width: auto;
 }
@@ -51,15 +55,15 @@ header {
 }
 
 .colmar {
-  color: rgb(74, 74, 74);
+  color: rgb(13, 13, 13);
   font-weight: bold;
 }
 
 .academy {
-  color: rgb(155, 155, 155);
+  color: rgb(92, 158, 173);
 }
 
-nav{
+.desktop-nav {
   display: flex;
   white-space: nowrap;
 }
@@ -71,42 +75,33 @@ nav{
   text-decoration: none;
 }
 
-.desktop-icon:visited {
-  color: rgb(74, 74, 74);
+.desktop-icon:visited, .desktop-icon:link {
+  color: rgb(13, 13, 13);
 }
 
-.mobile-icon {
+.mobile-nav {
   display: none;
 }
 
 @media only screen and (max-width:760px) {
-  .desktop-icon {
+  .desktop-nav {
     display: none;
-  }
-
-  .mobile-icon {
-    display: flex;
   }
 
   .logo {
+     display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    justify-content: space-around;
     width: 100%;
   }
 
-  .logo img, .mobile-icon {
-    display: flex;
-    flex-shrink: 1;
-    margin: 0 2rem;
+  .mobile-nav img {
+    height: 2rem;
+    width: auto;
   }
-
-  .flex {
-    display: flex;
-    justify-content: center;
-  }
-
-  .logo h1{
-    display: none;
-  }
-
 }
 
 /*Banner*/
@@ -114,8 +109,8 @@ nav{
   display: flex;
   align-items: center;
   width: 100%;
-  background-color: rgba(216, 216, 216, 0.9);
-  border-bottom: 1px solid rgb(224, 226, 226);
+  background-color: rgb(92, 158, 173);
+  border-bottom: 1px solid rgb(204, 204, 204);
 }
 
 .banner img {
@@ -143,6 +138,7 @@ nav{
   margin-bottom: 1rem;
   font-size: 1.7rem;
   font-weight: bold;
+  line-height: 1.5;
 }
 
 .button {
@@ -158,16 +154,44 @@ nav{
 @media only screen and (max-width: 1020px) {
 
   .banner-text {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .banner {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .banner img {
+    margin: 0;
     width: 100%;
+    height: auto;
+  }
+
+  .desktop-icon {
+    padding: 0;
+  }
+
+  .banner-text {
+    width: 95%;
+    margin: 2rem 1rem;
   }
 
   .banner-text h2 {
-
+    font-size: 2.2rem;
+    margin: auto 1.1rem 2rem 1rem;
   }
 
   .paragraph {
+    font-size: 1.4rem;
+    margin: auto 1rem;
+  }
 
+  .button {
+    width: 80%;
+    margin: 1.5rem auto 0 auto;
   }
 }
 
@@ -175,6 +199,7 @@ nav{
 main {
   display: flex;
   align-items: flex-start;
+  background-color: rgb(224, 226, 226);
 }
 
 .main {
@@ -182,7 +207,7 @@ main {
   flex-direction: column;
   margin: 2rem 1.5rem;
   width: 60%;
-  color: rgb(74, 74, 74);
+  color: rgb(13, 13, 13);
 }
 
 .main img {
@@ -203,13 +228,19 @@ main {
   line-height: 1.25;
   letter-spacing: 0.5px;
   word-spacing: 1.5px;
-  color: rgb(84, 84, 84);
+  color: rgb(13, 13, 13);
 }
 
 .caption {
   margin-top: 1.5rem;
   font-size: 0.8rem;
   color: rgb(66, 66, 66);
+}
+
+@media only screen and (max-width: 760px) {
+  .main {
+    display: none;
+  }
 }
 
 /*aside of main*/
@@ -219,18 +250,21 @@ main {
   justify-content: space-between;
   padding: 2rem 0;
   width: 40%;
-  border-left: 1.5px solid rgb(224, 226, 226);
 }
 
 .main-aside figure {
   display: flex;
   align-items: flex-start;
-  border-right: 1.5px solid rgb(224, 226, 226);
-  border-bottom: 1.5px solid rgb(224, 226, 226);
-  border-top: 1.5px solid rgb(224, 226, 226);
+  border-top: 1.5px solid rgb(204, 204, 204);
+  border-left: 1.5px solid rgb(204, 204, 204);
+  border-right: 1.5px solid rgb(204, 204, 204);
 }
 
-.desktop {
+.bottom {
+  border-bottom: 1.5px solid rgb(204, 204, 204);
+}
+
+.desktop-image {
   margin: 1rem;
   width: 35%;
   height: auto;
@@ -239,7 +273,7 @@ main {
 .aside-info {
   align-self: center;
   width: 65%;
-  color: rgb(76, 76, 76);
+  color: rgb(13, 13, 13);
   line-height: 1.5;
   letter-spacing: 0.5px;
 }
@@ -268,22 +302,69 @@ main {
   color: rgb(74, 144, 226);
 }
 
-.mobile {
+.mobile-image {
   display: none;
+}
+
+@media only screen and (max-width: 760px) {
+  .desktop-image {
+    display: none;
+  }
+
+  .mobile-image {
+    display: block;
+  }
+
+  .main-aside {
+    margin: 1rem;
+    padding: 0;
+    width: 100%;
+    border: none;
+  }
+
+  .main-aside figure {
+    flex-direction: column;
+    border: none;
+  }
+
+  .main-aside figure img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .aside-info {
+    align-self: flex-start;
+    width: 100%;
+  }
+
+  .aside-info h3 {
+    font-size: 1.75rem;
+  }
+
+  .aside-info p {
+    font-size: 1.1rem;
+    width: 100%;
+  }
+
+  .read {
+    margin-bottom: 2rem;
+  }
+
 }
 
 /*classes*/
 .classes {
   padding: 2rem 4.5rem;
-  color: rgb(74, 74, 74);
-  background-color: gray;
+  color: rgb(13, 13, 13);
+  background-color: rgb(92, 158, 173);
 }
 
 .classes h1 {
-  margin: 32px auto;
+  margin: 2rem auto;
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
+  color: rgb(255, 255, 250);
 }
 
 .class{
@@ -322,11 +403,48 @@ main {
   font-size: 1.2rem;
 }
 
+@media only screen and (max-width: 760px) {
+  .classes figure img, .class figcaption p {
+    display: none;
+  }
+
+  .classes {
+    padding: 0 0 2rem 0;
+  }
+
+  .class {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .class figcaption {
+    padding: 0;
+  }
+
+  .class figure {
+    padding: 1rem 1rem 1.5rem 1rem;
+    margin: 8px;
+    text-align: left;
+    width: 80%;
+  }
+
+  .class figcaption {
+    margin: auto;
+    width: 100%;
+  }
+
+  .class figcaption h3 {
+    margin: 0;
+  }
+}
+
 /*exhibit*/
 
 .exhibit {
-  background-color: white;
-  color: rgb(74, 74, 74);
+  background-color: rgb(204, 204, 204);
+  color: rgb(13, 13, 13);
 }
 
 .exhibit h1 {
@@ -366,7 +484,7 @@ video {
 
 .thesis-aside {
   width: 40%;
-  color: rgb( 76, 76, 76);
+  color: rgb( 13, 13, 13);
 }
 
 .thesis-aside figure {
@@ -399,12 +517,32 @@ video {
   height: auto;
 }
 
+@media only screen and (max-width: 760px) {
+  .video-info, .thesis-aside {
+    display: none;
+  }
+
+  .exhibit h1 {
+    margin: 2rem auto 1rem auto;
+  }
+
+  .video {
+    margin: 0 0 1.5rem 0;
+    width: 100%;
+  }
+
+  video{
+    width: 100%;
+  }
+}
+
 /*footer*/
 footer {
   display: flex;
   padding: 1rem 1.5rem 2rem 1.5rem;
   border-top: 1px solid rgb(224, 226, 226);
-  color: rgb(74, 74, 74);
+  color: rgb(204, 204, 204);
+  background-color: rgb(76, 76, 76);
 }
 
 footer span {
@@ -416,6 +554,17 @@ footer nav a{
   text-decoration: none;
 }
 
-footer nav a:visited {
-  color: rgb(74, 74, 74);
+footer nav a:visited, footer a:link {
+  color: rgb(204, 204, 204);
+}
+
+@media only screen and (max-width:760px) {
+  footer nav {
+    display: none;
+  }
+
+  footer {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
 }
